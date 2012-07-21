@@ -74,21 +74,22 @@ The output from this example would be:
 `if` statements
 ---------------
 
-`if` statements execute code only if a condition is true. For example:
+`if` statements execute code only if a condition is true. The code to include in the `if` is denoted by a number of indented lines, followed by a blank line. To indent a line, press the tab key with the cursor positioned at the start. An example:
 
     name = "Tim"
     if name == "Tim":
         print "Hello Tim."
         print "You've got an email."
-    else:    # something to do otherwise
+    else:    # something to do if the condition is false (optional)
         print "You're not Tim!"
     
     print "Python rocks!"
 
-The code to include in the `if` statement is denoted by the indent. To indent a line, press the tab key at the start. A blank line is also needed after the last statement in the `else` block, to denote the end. This example would output:
+This example would output:
 
     Hello Tim.
     You've got an email.
+    Python rocks!
 
 Numbers can be compared using the `==` operator, as well as `<`, `>`, `!=` and more (see appendix).
 
@@ -112,11 +113,13 @@ Lists store more than one value in a single variable, and allow you to set and r
     print shoppingList[0]    # Yes, it starts at zero.
 	shoppingList[3] = "Magazine"
     print shoppingList[2]
+	print shoppingList[3]
 
 Output:
 
     Bread
     PNP Transistors
+    Magazine
 
 The values can be anything, even other lists. Also, a list can contain values of different types.
 
