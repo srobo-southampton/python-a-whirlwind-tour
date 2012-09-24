@@ -7,6 +7,8 @@
 Python: A whirlwind tour
 ========================
 
+TODO: Getting started section (covering editors, the interpretter, and running files).
+
 Statements
 ----------
 
@@ -51,9 +53,7 @@ Variables
 
 Variables store values for later use, as in the first example. They can store many different things, but the most relevant here are numbers, strings (blocks of text), booleans (`True` or `False`) and lists (which we'll come to later).
 
-Variable names must be made up of letters and numbers, cannot contain spaces, and are case sensitive. This means that `foo` is not the same as `Foo` or `FOO`.
-
-To set a variable, simply use the `=` sign. For example:
+To set a variable, simply give its name (see [Identifiers][identifier], below), followed by `=` and a value. For example:
 
     x = 8
     foo = "Tall ship"
@@ -71,10 +71,20 @@ The output from this example would be:
     False
     True
 
+Concept: Identifiers
+--------------------
+
+Certain things in your program, for example variables and functions, will need names. These names are called identifiers, and must follow these rules:
+
+* Identifiers can contain letters, digits, and underscores. They may not contain spaces or other symbols.
+* An identifier cannot begin with a digit.
+* Identifiers are case sensitive. This means that `foo`, `Foo` and `FOO` are three different identifiers.
+
+
 `if` statements
 ---------------
 
-`if` statements execute code only if a condition is true. The code to include in the `if` is denoted by a number of indented lines, followed by a blank line. To indent a line, press the tab key with the cursor positioned at the start. An example:
+`if` statements execute code only if a condition is true. The code to include in the `if` is denoted by a number of indented lines, followed by a blank line (see the concept section below). To indent a line, press the tab key with the cursor positioned at the start. An example:
 
     name = "Tim"
     if name == "Tim":
@@ -102,7 +112,44 @@ Having another `if` in the `else` block is so common that there's a special keyw
         print "We might be able to afford the tall ship..."
     else:
         print "We can't afford the tall ship. :-("
+
+
+Concept: Code blocks and indentation
+------------------------------------
+
+In the previous section, you probably noticed that the statements 'inside' the `if` statements were indented relative to the rest of the code. Python is unique in that it cares about indentation, and uses it to decide which statements are referred to by things like `if` statements.
+
+If you don't indent your code in other programming languages, it will run, and any poor soul who has to read your code afterwards will hunt you down and hit you around the head with a large, wet, fish. In Python, you'll just get an error, which I'm sure you'll agree is preferable.
+
+A group of consecutive statements that are all indented by the same distance, and end with a blank line, is called a code block. `if` statements, as well as functions and loops, all refer to the code block that follows them, which must be indented further than that statement. An example is in order. Let's adapt the first `if` example:
+
+    name = "Tim"
+    email = "Bank of Nigeria: Statement"
+    if name == "Tim":
+        print "Hello Tim."
+        if email != "":
+            print "You've got an email."
+
+            # (blocks can contain blank lines)
+            if email != "Bank of Nigeria: Statement":
+                print "Looks legitimate, too!"
+        else:
+            print "No mail."
+            
+    else:    # something to do if the condition is false (optional)
+        print "You're not Tim!"
     
+    print "Python rocks."
+
+Output:
+
+    Hello Tim.
+    You've got an email!
+    Python rocks.
+
+To find the limits of an `if` statement, just scan down until you encounter its `else` block or a statement on the same indentation level. I'd encourage you to play around with this example until you understand what's happening.
+
+One final thing: Python doesn't mind _how_ you indent lines, just so long as you're consistent. Some text editors insert tab characters when you press tab; others insert four (or sometimes fewer) spaces. They'll often look the same, but cause errors if they're mixed. Check your editor's settings to make sure they're consistent. Four spaces per tab is the convention in Python. I'll now move on from this topic before that last sentence causes a flame war.
 
 Lists
 -----
@@ -337,3 +384,6 @@ Output:
 This error has a traceback. Outside of an interpretter, this would list the functions that the error occurred in.
 
 This example illustrates a common cause. As `a` has three elements, you'd expect it to have a third element. However, in Python, the 'first' element is number 0, the 'second' is number 1, and so on. So, the last element in the array is actually number 2, and element number 3 doesn't actually exist.
+
+[identifier]: #concept-identifiers
+[block]
