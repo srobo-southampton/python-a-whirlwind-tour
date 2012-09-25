@@ -7,7 +7,13 @@
 Python: A whirlwind tour
 ========================
 
-TODO: Getting started section (covering editors, the interpretter, and running files).
+In this tutorial, I'm going to introduce the basic concepts of programming, which will be central to the programs that you will run on your robot. There are many different languages in which computers can be programmed, all with their advantages and disadvantages, but for the Student Robotics competition we use one called Python, as it's good for beginners, but also powerful. We'll use version 2.7.
+
+To run Python programs you need a something called an interpreter. This is another computer program that will interpret human-readable Python code into something that the computer can execute. There are a number of online interpreters that should work even on a locked-down computer such as you will probably find in your college.
+
+One such interpreter can be found at <doc.pyschools.com/console>. It's quite simple to use; simply enter your program in the pane on the left, click the green "Play" arrow, and the result will appear in the other pane. If that doesn't work (it sometimes plays up in Internet Explorer), try <trypython.org>, where you enter one line at a time, and the output is shown below that line.
+
+There's nothing particularly wrong with online interpreters for learning the basics, and for programming your robots you can use our online environment, but if you want to use Python for something else you'll want a local interpreter. Mac OS X and Linux come with one by default (just type `python` at the terminal), but you can download the Windows interpreter from <python.org/download>.
 
 Statements
 ----------
@@ -344,7 +350,7 @@ Output:
                          ^
     SyntaxError: invalid syntax
 
-The output shows a problem with the fourth line, where I've forgotten to place brackets around the string parameter. The arrow indicates the place where the interpretter thinks the problem is. As you can see, this could often be more helpful.
+The output shows a problem with the fourth line, where I've forgotten to place brackets around the string parameter. The arrow indicates the place where the interpreter thinks the problem is. As you can see, this could often be more helpful.
 
 Other causes of syntax errors to look out for are:
 * Incorrect indentation or not leaving blank lines after blocks of code. An example:
@@ -381,9 +387,9 @@ Output:
       File "<stdin>", line 1, in <module>
     IndexError: list index out of range
 
-This error has a traceback. Outside of an interpretter, this would list the functions that the error occurred in.
+This error has a traceback. Outside of an interpreter, this would list the functions that the error occurred in.
 
 This example illustrates a common cause. As `a` has three elements, you'd expect it to have a third element. However, in Python, the 'first' element is number 0, the 'second' is number 1, and so on. So, the last element in the array is actually number 2, and element number 3 doesn't actually exist.
 
 [identifier]: #concept-identifiers
-[block]
+[block]: #concept-code-blocks-and-indentation
