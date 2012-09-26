@@ -11,9 +11,15 @@ In this tutorial, I'm going to introduce the basic concepts of programming, whic
 
 To run Python programs you need a something called an interpreter. This is another computer program that will interpret human-readable Python code into something that the computer can execute. There are a number of online interpreters that should work even on a locked-down computer such as you will probably find in your college.
 
-One such interpreter can be found at <doc.pyschools.com/console>. It's quite simple to use; simply enter your program in the pane on the left, click the green "Play" arrow, and the result will appear in the other pane. If that doesn't work (it sometimes plays up in Internet Explorer), try <trypython.org>, where you enter one line at a time, and the output is shown below that line.
+A rather good online interpreter can be found at <skulpt.org>. It's quite simple to use; simply enter your program into the top box (with the navy blue background) and press Ctrl+Enter to run it. The output will appear in the grey box below.
 
-There's nothing particularly wrong with online interpreters for learning the basics, and for programming your robots you can use our online environment, but if you want to use Python for something else you'll want a local interpreter. Mac OS X and Linux come with one by default (just type `python` at the terminal), but you can download the Windows interpreter from <python.org/download>.
+If you have problems with this, try <doc.pyschools.com/console>. It works in the same way, except that you click the green arrow to run your code. Whichever you choose, test it with this one line program:
+
+    print "Hello World!"
+
+The text `Hello World!` should appear in the output box.
+
+There's nothing particularly wrong with online interpreters for our needs, but if you want to use Python for something else you'll want a local interpreter. Mac OS X and Linux come with one by default (just type `python` at the terminal), and you can download the Windows interpreter from <python.org/download>.
 
 Statements
 ----------
