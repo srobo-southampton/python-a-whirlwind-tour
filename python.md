@@ -9,6 +9,13 @@ Python: A whirlwind tour
 
 In this tutorial, I'm going to introduce the basic concepts of programming, which will be central to the programs that you will run on your robot. There are many different languages in which computers can be programmed, all with their advantages and disadvantages, but for the Student Robotics competition we use one called Python 2.7. We chose it because it's good for beginners, but also elegant and powerful.
 
+After you've completed the tutorial, you might want to try some exercises. There are plenty, but those at <http://algorithm.cs.uct.ac.za/pb/exercises.html> look quite good. Some are trivially easy, but there are good exercises from lesson 9 onwards.
+
+Before we begin: a word on learning. The way that you learn to code is by doing it; make sure you try out the examples, fiddle with them, break them, do exercises. So, on with the tutorial!
+
+Using an interpreter
+--------------------
+
 To run Python programs you need a something called an interpreter. This is a computer program interprets human-readable Python code into something that the computer can execute. There are a number of online interpreters that should work even on a locked-down computer such as you will probably find in your college.
 
 A rather good online interpreter can be found at <skulpt.org>. It's quite simple to use; simply enter your program into the top box (with the navy blue background) and press Ctrl+Enter to run it. The output will appear in the grey box below.
@@ -20,6 +27,7 @@ If you have problems with this, try <doc.pyschools.com/console>. It works in the
 The text `Hello World!` should appear in the output box.
 
 There's nothing particularly wrong with online interpreters for our needs, but if you want to use Python for something else you'll want a local interpreter. Mac OS X and Linux come with one by default (just type `python` at the terminal), and you can download the Windows interpreter from <python.org/download>.
+
 
 Statements
 ----------
