@@ -3,6 +3,7 @@
     <title>$title$</title>
 	<meta name="author" content="$author$" />
 	<meta name="generator" content="pandoc" />
+	<meta name="copyright" content="&copy; 2013 Student Robotics">
     <style type="text/css">
         pre {
          white-space: pre-wrap;
@@ -16,6 +17,10 @@
          padding: 0.5em 1em;
          border: 1px solid #bebab0;
         }
+
+		.copyright {
+		 font-size:small;
+		}
     </style>
 	<!-- Code style "Tango" from Pandoc 1.9.1.1 -->
 	<style type="text/css">
@@ -43,7 +48,13 @@
 </head>
 <body>
 $include-before$
+
+<p class="copyright">Copyright &copy; 2013 Student Robotics</p>
+
 $body$
+
+<p class="copyright">Copyright &copy; 2013 Student Robotics</p>
+
 $include-after$
 </body>
 </html>
