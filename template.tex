@@ -115,6 +115,8 @@ $if(date)$
 \date{$date$}
 $endif$
 
+\usepackage{graphicx}
+
 \begin{document}
 
 \lfoot[\copyright 2013 Student Robotics]{\copyright 2013 Student Robotics}
@@ -122,6 +124,11 @@ $for(include-before)$
 $include-before$
 
 $endfor$
+
+\begin{center}
+\includegraphics[width=0.8\textwidth]{website_logo.png}
+\end{center}
+
 $if(toc)$
 \tableofcontents
 
