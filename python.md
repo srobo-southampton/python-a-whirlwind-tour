@@ -85,10 +85,10 @@ x = 8
 my_string = "Tall ship"
 ~~~~~
 
-You can set a variable to one entered by the user with the `input` function (we'll cover functions in more detail later):
+You can ask the user to put some text into a variable with the `raw_input` function (we'll cover functions in more detail later):
 
 ~~~~~ {.python}
-name = input("What is your name?")
+name = raw_input("What is your name?")
 ~~~~~
 
 To check if two numbers are equal, the `==` operator is used. This results in a boolean value, either `True` or `False`. For example:
@@ -123,8 +123,9 @@ Exercises: Variables and Mathematics
 Complete this program:
 
 ~~~~~ {.python}
-a = float(input("Enter first number: "))
-b = float(input("Enter second number: "))
+a = float(raw_input("Enter first number: "))
+b = float(raw_input("Enter second number: "))
+# the `float` function turns the text from `raw_input` into a number
 
 # Store the average of a and b in the variable `average`
 
@@ -135,9 +136,8 @@ Run your code and check that it works.
 
 ### Euclidean distance calculator ###
 
-Write a program which uses `input` to take an X and a Y coordinate, and calculate the distance from (0, 0) to (X, Y). Put the code into an interpreter and run it. Does it do what you expected?
+Write a program which uses `raw_input` (with `float` as above) to take an X and a Y coordinate, and calculate the distance from (0, 0) to (X, Y) using Pythagorus' Theorum. Put the code into an interpreter and run it. Does it do what you expected?
 
-(If you're having trouble with division not doing what you expect, try wrapping your `input`s in `float`s, as in the first exercise.)
 
 **Extension:** can you adapt the program to calculate the distance between any two points?
 
@@ -147,7 +147,7 @@ Write a program which uses `input` to take an X and a Y coordinate, and calculat
 `if` statements execute code only if a condition is true. The code to include in the `if` is denoted by a number of indented lines, followed by a blank line (see the concept section on [code blocks][block]). To indent a line, press the tab key or insert four spaces at the start. For example:
 
 ~~~~~ {.python}
-name = input("What is your name?")
+name = raw_input("What is your name?")
 if name == "Tim":
 	print "Hello Tim."
 	print "You've got an email."
@@ -191,7 +191,7 @@ If you don't indent your code in other programming languages, it will run just f
 A group of consecutive statements that are all indented by the same distance, and end with a blank line, is called a block. `if` statements, as well as functions and loops, all refer to the block that follows them, which must be indented further than that statement. An example is in order. Let's expand the first `if` example:
 
 ~~~~~ {.python}
-name = input("What is your name?")
+name = raw_input("What is your name?")
 email = "Bank of Nigeria: Tax Refund"
 if name == "Tim":
 	print "Hello Tim."
@@ -362,17 +362,17 @@ Exercises: Lists and Loops
 Write a program which calculates the average of a list of numbers. You can specify the list in the code.
 
 **Extension:**
-You can tell when a user has not entered anything at an `input` prompt when it returns the special value `None`. For example:
+You can tell when a user has not entered anything at a `raw_input` prompt when it returns the empty string, `""`. For example:
 
 ~~~~~ {.python}
-var = input("Enter something: ")
-if var == None:
+var = raw_input("Enter something: ")
+if var == "":
 	print "You didn't enter anything!"
 else:
-	print "You entered",var
+	print "You entered",float(var)
 ~~~~~
 
-Now, extend your program to let the user enter the list of values. Stop asking for new list entries when they do not enter anything at the `input` prompt.
+Now, extend your program to let the user enter the list of values. Stop asking for new list entries when they do not enter anything at the `raw_input` prompt.
 
 ### Fizz buzz ###
 
