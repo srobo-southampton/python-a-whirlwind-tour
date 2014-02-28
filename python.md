@@ -134,10 +134,11 @@ print "The average of",a,"and",b,"is",average
 
 Run your code and check that it works.
 
-### Euclidean distance calculator ###
+### Distance calculator ###
 
 Write a program which uses `raw_input` (with `float` as above) to take an X and a Y coordinate, and calculate the distance from (0, 0) to (X, Y) using Pythagorus' Theorum. Put the code into an interpreter and run it. Does it do what you expected?
 
+**Hint:** you can find the square root of a number by raising it to the power of 0.5, for example, `my_number ** 0.5`.
 
 **Extension:** can you adapt the program to calculate the distance between any two points?
 
@@ -518,9 +519,11 @@ Now, let's refine it with functions:
 ~~~~~ {.python}
 def count_letter(str, l):
 	x = 0
-	for c in list(str): # list(str) divides the string into a list of characters.
+	for c in list(str):
+		# list(str) divides the string into a list of characters.
 		if c == l:
 			x = x + 1
+
 	return x
 
 my_string = "Bees like cheese when they're wearing hats."

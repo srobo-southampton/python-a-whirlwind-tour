@@ -8,6 +8,8 @@ Using the simulator
 
 On your desktop on the lab machine, you should find a folder named 'robot-sim', with another folder and a couple of Python programs inside. This is the simulator directory. When you place programs in the folder and follow the steps below, your program will be run in the simulator.
 
+A program is simply a text file with a name ending in `.py`. Create such a file in your robot-sim directory, or open template.py and use 'Save as' to create a copy.
+
 In your program, you first need to initialise the simulator which will contain your robot. To do so, start your program with the following code.
 
 ~~~~~ {.python}
@@ -16,7 +18,7 @@ from sr import *
 sim = Simulator(num_tokens=5)
 ~~~~~
 
-(You can vary the number of tokens in the arena by changing the number after `num_tokens`.)
+(You can vary the number of tokens in the virtual arena by changing the number after `num_tokens`.)
 
 Next, create a `SimRobot` object. We haven't covered objects, but for now you can think of them as collections of variables and functions.
 
@@ -142,6 +144,9 @@ R = Robot()
 There are a number of features which we haven't covered here, most importantly the IO and servo boards. The IO board allows you to interface with sensors, while the servo board will likely be quite important for your grabber. These are described in our programming documentation online at <http://srobo.org/docs/programming/sr>.
 
 Finally, here are a few things to consider when working in the real world:
+
 * In the simulator, the vision system is completely reliable. Unfortunately, in the real world the system cannot see some markers when they are too far away. It is also quite sensitive to motion blur, so you will probably need to stop moving to use the camera.
+
 * In the competition, you can only return your tokens to your own zone to get points, so you'll have to change which wall markers you head for depending on which zone you are in. This is available to your program as `R.zone`.
+
 * Other robots! This is the hardest thing to prepare for. You should avoid collisions with another robot where possible. They will have a libkoki marker (`MARKER_ROBOT`) on each side.
