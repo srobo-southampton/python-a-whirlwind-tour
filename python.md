@@ -144,7 +144,7 @@ Write a program which uses `raw_input` (with `float` as above) to take an X and 
 `if` statements
 ---------------
 
-`if` statements execute code only if a condition is true. The code to include in the `if` is denoted by a number of indented lines, followed by a blank line (see the concept section on [code blocks][block]). To indent a line, press the tab key or insert four spaces at the start. For example:
+`if` statements execute code only if a condition is true. The code to include in the `if` is denoted by a number of indented lines (see the concept section on [code blocks][block]). To indent a line, press the tab key or insert four spaces at the start. For example:
 
 ~~~~~ {.python}
 name = raw_input("What is your name?")
