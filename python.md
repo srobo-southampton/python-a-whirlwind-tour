@@ -109,23 +109,22 @@ The output from this example would be:
 Concept: Identifiers
 --------------------
 
-Certain things in your program, for example variables and functions, will need names. These names are called identifiers, and must follow these rules:
+Certain things in your program, for example variables and functions, will need names. These names are called 'identifiers', and must follow these rules:
 
 * Identifiers can contain letters, digits, and underscores. They may not contain spaces or other symbols.
 * An identifier cannot begin with a digit.
-* Identifiers are case sensitive. This means that `foo`, `Foo` and `FOO` are three different identifiers.
+* Identifiers are case sensitive. This means that `bees`, `Bees` and `BEES` are three different identifiers.
 
 Exercises: Variables and Mathematics
 ------------------------------------
 
 ### Average calculator ###
 
-Complete this program:
+The first two lines of this program put two numbers entered by the user into variables `a` and `b`. (The `float` function turns the string from `raw_input` into a number.) Replace the comment with code that averages the numbers and puts them in a variable called `average`.
 
 ~~~~~ {.python}
 a = float(raw_input("Enter first number: "))
 b = float(raw_input("Enter second number: "))
-# the `float` function turns the text from `raw_input` into a number
 
 # Store the average of a and b in the variable `average`
 
