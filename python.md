@@ -474,6 +474,7 @@ Output:
 
     [0, 1, 2, 3, 4]
     [2, 3, 4]
+	[1, 3, 5, 7, 9]
 
 There are many built-in functions supplied with Python (see [appendix](#built-in-functions)). Most are in 'modules', collections of functions which have to be imported. For example, the `math` module contains mathematical functions. To use the `sin` function, we must import it:
 
