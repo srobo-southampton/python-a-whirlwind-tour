@@ -516,12 +516,12 @@ Without functions, most programs would be very hard to read and maintain. Here's
 my_string = "All bees like cheese when they're wearing hats."
 x = 0
 for c in my_string:
-	if c == 'a':
+	if c == "a":
 		x = x + 1
 
 y = 0
 for c in my_string:
-	if c == 'e':
+	if c == "e":
 		y = y + 1
 ~~~~~
 
@@ -541,8 +541,8 @@ def count_letter(str, l):
 
 my_string = "Bees like cheese when they're wearing hats."
 
-x = count_letter(my_string, 'a')
-y = count_letter(my_string, 'e')
+x = count_letter(my_string, "a")
+y = count_letter(my_string, "e")
 ~~~~~
 
 This version has a number of advantages:
