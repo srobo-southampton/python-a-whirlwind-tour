@@ -337,20 +337,20 @@ The condition is the same as it would be in an `if` statement, and the block of 
 `for` loops
 -----------
 
-The most common application of loops is in conjunction with lists. The `for` loop is designed specifically for that purpose. Example:
+The most common application of loops is in conjunction with lists. The `for` loop is designed specifically for that purpose. For example:
 
 ~~~~~ {.python}
 shopping_list = ["Bread", "Milk", "PNP Transistors", "Newspaper"]
 for x in shopping_list:
-	print x
+	print "[ ]", x
 ~~~~~
 
 The code is executed once for each item in the list, with `x` set to each item in turn. So, the output of this example is:
 
-    Bread
-    Milk
-    PNP Transistors
-    Newspaper
+    [ ] Bread
+    [ ] Milk
+    [ ] PNP Transistors
+    [ ] Newspaper
 
 Unfortunately, this method doesn't tell you the index of the current item. `x` is only a temporary variable, so modifying it has no effect on the list itself (try it). This is where the `range` function comes in (see the [Calling functions](#calling-functions) section). An example with numbers:
 
