@@ -5,16 +5,16 @@
 Python: A whirlwind tour
 ========================
 
-In this tutorial, we'll introduce the basic concepts of programming, which will be central to the programs that you will run on your robot. There are many different languages in which computers can be programmed, all with their advantages and disadvantages, but for the Student Robotics competition we use one called Python 2. We chose it because it's good for beginners, but also elegant and powerful.
+In this tutorial, we'll introduce the basic concepts of programming, which will be central to the programs that you will run on your robot. There are many different languages in which computers can be programmed, all with their advantages and disadvantages, but for the Student Robotics competition we use one called Python 2.6. We chose it because it's good for beginners, but also elegant and powerful.
 
-Sprinkled through the tutorial are exercises. The first ones for each section should be quite easy, while the higher-numbered exercises will be harder. Some will be very hard on purpose.
+Sprinkled through the tutorial are exercises. The first ones for each section should be quite easy, while the higher-numbered exercises will be harder. Some will be very hard; try these if you're up for a challenge.
 
 Before we begin: a word on learning. The way that you learn to code is by doing it; make sure you try out the examples, fiddle with them, break them, try at least one exercise from each section. So, on with the tutorial!
 
 Using an interpreter
 --------------------
 
-To run Python programs you need a something called an interpreter. This is a computer program interprets human-readable Python code into something that the computer can execute. There are a number of online interpreters that should work even on a locked-down computer such as you will probably find in your college.
+To run Python programs you need a something called an interpreter. This is a computer program which interprets human-readable Python code into something that the computer can execute. There are a number of online interpreters that should work even on a locked-down computer such as you will probably find in your college.
 
 If your computer has a compatible browser, go to <http://repl.it> and click Python. Enter your program in the box on the left, and click the arrow to run it.
 
@@ -28,7 +28,7 @@ print "Hello World!"
 
 The text `Hello World!` should appear in the output box.
 
-There's nothing particularly wrong with online interpreters for our needs, but if you want to use Python for something more advanced you'll want an interpreter which runs directly on your computer. Mac OS X and Linux come with one by default (just type `python` at the terminal), and you can download the Windows interpreter from <http://python.org/download> (try Portable Python (<portablepython.com> if you can't install programs on your computer).
+There's nothing particularly wrong with online interpreters for our needs, but if you want to use Python for something more advanced you'll want an interpreter which runs directly on your computer. Mac OS X and Linux come with one by default (just type `python` at the terminal), and you can download the Windows interpreter from <http://python.org/download> (try Portable Python (<http://portablepython.com>) if you can't install programs on your computer).
 
 Statements
 ----------
@@ -135,7 +135,7 @@ Run your code and check that it works.
 
 ### Distance calculator ###
 
-Write a program which uses `raw_input` (with `float` as above) to take an X and a Y coordinate, and calculate the distance from (0, 0) to (X, Y) using Pythagorus' Theorum. Put the code into an interpreter and run it. Does it do what you expected?
+Write a program which uses `raw_input` (with `float` as above) to take an X and a Y coordinate, and calculate the distance from (0, 0) to (X, Y) using Pythagoras' Theorem. Put the code into an interpreter and run it. Does it do what you expected?
 
 **Hint:** you can find the square root of a number by raising it to the power of 0.5, for example, `my_number ** 0.5`.
 
@@ -144,14 +144,14 @@ Write a program which uses `raw_input` (with `float` as above) to take an X and 
 `if` statements
 ---------------
 
-`if` statements execute code only if a condition is true. The code to include in the `if` is denoted by a number of indented lines (see the concept section on [code blocks][block]). To indent a line, press the tab key or insert four spaces at the start. For example:
+`if` statements execute code only if a condition is true. The code to include in the `if` is denoted by a number of indented lines (see the concept section on [code blocks][block]). To indent a line, press the tab key or insert four spaces at the start. You can also include an `else` statement, which is executed if the condition is false. For example:
 
 ~~~~~ {.python}
 name = raw_input("What is your name?")
 if name == "Tim":
 	print "Hello Tim."
 	print "You've got an email."
-else:    # something to do if the condition is false (optional)
+else:
 	print "You're not Tim!"
 
 print "Python rocks!"
@@ -199,7 +199,7 @@ Concept: Code blocks and indentation
 
 In the previous section, you probably noticed that the statements 'inside' the `if` statements were indented relative to the rest of the code. Python is reasonably unique in that it cares about indentation, and uses it to decide which statements are referred to by things like `if` statements.
 
-If you don't indent your code in other programming languages, it will run just fine, and any poor soul who has to read your code afterwards will hunt you down and hit you around the head with a large, wet, fish. In Python, you'll just get an error, which we're sure you'll agree is preferable.
+If you don't indent your code in other programming languages, it will run just fine, and any poor soul who has to read your code afterwards will hunt you down and hit you around the head with a large, wet fish. In Python, you'll just get an error, which we're sure you'll agree is preferable.
 
 A group of consecutive statements that are all indented by the same distance is called a block. `if` statements, as well as functions and loops, all refer to the block that follows them, which must be indented further than that statement. An example is in order. Let's expand the first `if` example:
 
@@ -231,7 +231,7 @@ Output (for "Tim" as before):
 
 To find the limits of an `if` statement, just scan straight down until you encounter another statement on the same indent level. Play around with this example until you understand what's happening.
 
-One final thing: Python doesn't mind _how_ you indent lines, just so long as you're consistent. Some text editors insert indent characters when you press tab; others insert spaces (normally four). They'll often look the same, but cause errors if they're mixed. If you're using an online interpretter, you probably don't need to worry. Otherwise, check your editor's settings to make sure they're consistent. Four spaces per indent level is the convention in Python. We'll now move on from this topic before that last sentence causes a flame war.
+One final thing: Python doesn't mind _how_ you indent lines, just so long as you're consistent. Some text editors insert indent characters when you press tab; others insert spaces (normally four). They'll often look the same, but cause errors if they're mixed. If you're using an online interpreter, you probably don't need to worry. Otherwise, check your editor's settings to make sure they're consistent. Four spaces per indent level is the convention in Python. We'll now move on from this topic before that last sentence causes a flame war.
 
 Exercises: `if` Statements and Blocks
 -------------------------------------
@@ -292,13 +292,13 @@ Finally, you can add a value to the end of a list with the `append` method:
 
 ~~~~~ {.python}
 shopping_list = ["Bread", "Milk", "PNP Transistors", "Newspaper"]
-shopping_list.append("Soldering iron")
+shopping_list.append("Mince pies in October")
 print shopping_list
 ~~~~~
 
 The values in a list can be of any type, even other lists. Also, a list can contain values of different types.
 
-There are various other useful data structures that are beyond the scope of this tutorial, such as dictionaries (allow indices other than numbers). You can find out more about these at <http://docs.python.org/tutorial/datastructures.html>.
+There are various other useful data structures that are beyond the scope of this tutorial, such as dictionaries (which allow indices other than numbers). You can find out more about these at <http://docs.python.org/tutorial/datastructures.html>.
 
 `while` loops
 -------------
@@ -378,7 +378,7 @@ Write a program which calculates the average of a list of numbers. You can speci
 You can tell when a user has not entered anything at a `raw_input` prompt when it returns the empty string, `""`. For example:
 
 ~~~~~ {.python}
-var = raw_input("Enter something: ")
+var = raw_input("Enter a number: ")
 if var == "":
 	print "You didn't enter anything!"
 else:
@@ -440,7 +440,7 @@ while x > 0:
 		exit()  # not supported in repl.it
 ~~~~~
 
-This will output the numbers 10 to 6, and then stop. Not very useful. However, most functions take input values ('parameters') and output something useful (a 'return value'). These are passed in brackets after the name of the function, separated by commas. For example, the `len` function that we used in the second `for` loop example returns the length of the given list:
+This will output the numbers 10 to 6, and then stop. Not very useful. However, most functions take input values ('parameters') and output something useful (a 'return value'). For example, the `len` function that we used in the second `for` loop example returns the length of the given list:
 
 ~~~~~ {.python}
 my_list = [42, "BOOMERANG!!!", [0, 3]]
@@ -554,7 +554,7 @@ This version has a number of advantages:
 
 The last point has another advantage. There's a bug in this program: upper-case letters aren't counted. It's easy to fix, but in the function version we only have to apply the fix in one place. True, it would only be two places in the original, but in a major program, it could be thousands.
 
-You should try and use functions wherever you see lines in your code that are repeated, or find yourself writing code to do the same thing (or a similar thing) more than once. In these situations, look at the relevant bits of code and try to think of a way to put it into a function.
+You should try and use functions wherever you see multiple lines of code that are repeated, or find yourself writing code to do the same thing (or a similar thing) more than once. In these situations, look at the relevant bits of code and try to think of a way to put it into a function.
 
 Concept: Scope
 --------------
@@ -579,9 +579,9 @@ Output:
 
 This can get quite confusing, so it's best to avoid giving variables inside functions ('local' variables) the same identifier as those outside. If you want to get information out of a function, `return` it.
 
-The concept of isolating the inside of a function from the outside is called 'scope'. We say that variables inside a function are in a different scope from those outside.
+This concept is called 'scope'. We say that variables which are changed inside a function are in a different scope from those outside.
 
-You can have functions within functions, and this can actually be quite useful. It this situation, each nested function will also have its own scope.
+You can have functions within functions, and this can actually be quite useful. In this situation, each nested function will also have its own scope.
 
 Exercises: Functions
 --------------------
@@ -614,7 +614,7 @@ Wrap the code for your average calculator from the Lists and Loops exercises in 
 What to do next
 ---------------
 
-As mentioned above, there are loads of Python exercises out there on the Web. If you want to learn some more advanced concepts, there are more tutorials out there too, and <http://learnpython.org/> looks like a good choice. Start at the Classes and Objects section.
+As mentioned at the start, there are loads of Python exercises out there on the Web. If you want to learn some more advanced concepts, there are more tutorials out there too, and <http://learnpython.org/> looks like a good choice. Start at the Classes and Objects section.
 
 Appendices
 ==========
@@ -661,7 +661,7 @@ z = 2
 
 if x == 5 and y == 3:
 	print "True"
-else
+else:
 	print "False"
 
 print x == 5 or not y == 8         # could use y != 8 instead (preferable)
@@ -697,7 +697,7 @@ One of the most useful modules for the moment will be `math` (<http://docs.pytho
 
 Common Errors and mistakes
 --------------------------
-This is just a selection of common error messages. If you encounter one that isn't on this list, the first thing to do is to search the Internet for it.
+This is just a selection of common error messages. If you encounter one that isn't on this list, quickly check your code and search the Internet for it.
 
 ### Syntax Error
 
@@ -735,10 +735,13 @@ print X     # wrong case
 
 Output:
 
-    Traceback [...]
+	Traceback (most recent call last):
+	  File "<stdin>", line 2, in <module>
     NameError: name 'X' is not defined
 
 This error has occurred because the variable was defined as `x`, but referenced as `X` in uppercase. As previously alluded to, Python distinguishes between cases, so these are two different variables.
+
+This error has a traceback. This would list the functions that the error occurred in, if it was inside a function.
 
 ### Index Error
 
@@ -755,8 +758,6 @@ Output:
     Traceback (most recent call in last):
       File "<stdin>", line 1, in <module>
     IndexError: list index out of range
-
-This error has a traceback. This would list the functions that the error occurred in, if it was inside a function.
 
 This example illustrates a common cause. As `a` has three elements, you'd expect it to have a third element. However, in Python, the 'first' element is number 0, the 'second' is number 1, and so on. So, the last element in the array is actually number 2, and element number 3 doesn't exist.
 
