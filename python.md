@@ -532,8 +532,7 @@ Now, let's refine it with functions:
 ~~~~~ {.python}
 def count_letter(str, l):
 	x = 0
-	for c in list(str):
-		# list(str) divides the string into a list of characters.
+	for c in str:
 		if c == l:
 			x = x + 1
 
