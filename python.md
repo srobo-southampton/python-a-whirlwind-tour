@@ -165,7 +165,20 @@ If you typed "Tim" at the prompt, this example would output:
 
 Numbers can be compared using the `==` operator, as well as `<`, `>`, `!=` and more (see the [Operators](#operators) appendix). You can also use the keywords `and`, `or`, and `not`.
 
-Having another `if` in the `else` block is so common that there's a special keyword, `elif`, for the purpose. Another example:
+Having another `if` in the `else` block is very common:
+
+~~~~~ {.python}
+price = 50000 * 1.3
+if price < 60000:
+	print "We can afford the tall ship!"
+else:
+	if price < 70000:
+		print "We might be able to afford the tall ship..."
+	else:
+		print "We can't afford the tall ship. :-("
+~~~~~
+
+So common that there's a special keyword, `elif`, for the purpose. So, the following piece of code is equivalent to the last:
 
 ~~~~~ {.python}
 price = 50000 * 1.3
@@ -177,7 +190,7 @@ else:
 	print "We can't afford the tall ship. :-("
 ~~~~~
 
-Output:
+Both output:
 
     We might be able to afford the tall ship...
 
