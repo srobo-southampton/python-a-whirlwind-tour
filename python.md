@@ -201,7 +201,7 @@ In the previous section, you probably noticed that the statements 'inside' the `
 
 If you don't indent your code in other programming languages, it will run just fine, and any poor soul who has to read your code afterwards will hunt you down and hit you around the head with a large, wet, fish. In Python, you'll just get an error, which we're sure you'll agree is preferable.
 
-A group of consecutive statements that are all indented by the same distance, and end with a blank line, is called a block. `if` statements, as well as functions and loops, all refer to the block that follows them, which must be indented further than that statement. An example is in order. Let's expand the first `if` example:
+A group of consecutive statements that are all indented by the same distance is called a block. `if` statements, as well as functions and loops, all refer to the block that follows them, which must be indented further than that statement. An example is in order. Let's expand the first `if` example:
 
 ~~~~~ {.python}
 name = raw_input("What is your name?")
