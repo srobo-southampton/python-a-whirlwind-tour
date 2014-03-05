@@ -669,8 +669,8 @@ if x == 5 and y == 3:
 else:
 	print "False"
 
-print x == 5 or not y == 8         # could use y != 8 instead (preferable)
-print x == 2 and y == 3 or z == 2  # this needs brackets for clarity! (see below)
+print x == 5 or not y == 8         # could use y != 8 instead
+print x == 2 and y == 3 or z == 2  # needs brackets for clarity!
 ~~~~~
 
 Output:
