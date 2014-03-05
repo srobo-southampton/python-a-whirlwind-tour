@@ -91,21 +91,6 @@ You can ask the user to put some text into a variable with the `raw_input` funct
 name = raw_input("What is your name?")
 ~~~~~
 
-To check if two numbers are equal, the `==` operator is used. This results in a boolean value, either `True` or `False`. For example:
-
-~~~~~ {.python}
-x = 4
-y = 8
-my_boolean = (x == y)
-print my_boolean
-print x * 2 == y
-~~~~~
-
-The output from this example would be:
-
-    False
-    True
-
 Concept: Identifiers
 --------------------
 
@@ -141,10 +126,24 @@ Write a program which uses `raw_input` (with `float` as above) to take an X and 
 
 **Extension:** can you adapt the program to calculate the distance between any two points?
 
-`if` statements
----------------
+Booleans and `if` statements
+----------------------------
 
-`if` statements execute code only if a condition is true. The code to include in the `if` is denoted by a number of indented lines (see the concept section on [code blocks][block]). To indent a line, press the tab key or insert four spaces at the start. You can also include an `else` statement, which is executed if the condition is false. For example:
+A boolean value is either `True` or `False`. For example:
+
+~~~~~ {.python}
+print 42 > 5
+print 4 == 2
+~~~~~
+
+Output:
+
+	True
+	False
+
+`<` and `==` are operators, just like `+` or `*`, which return booleans. Others include `<=` (less than or equal to), `>`, `>=` and `!=` (not equal to) (see the [Operators](#operators) appendix). You can also use `and`, `or`, and `not`.
+
+`if` statements execute code only if their condition is true. The code to include in the `if` is denoted by a number of indented lines (see the concept section on [code blocks][block]). To indent a line, press the tab key or insert four spaces at the start. You can also include an `else` statement, which is executed if the condition is false. For example:
 
 ~~~~~ {.python}
 name = raw_input("What is your name?")
@@ -162,8 +161,6 @@ If you typed "Tim" at the prompt, this example would output:
     Hello Tim.
     You've got an email.
     Python rocks!
-
-Numbers can be compared using the `==` operator, as well as `<`, `>`, `!=` and more (see the [Operators](#operators) appendix). You can also use the keywords `and`, `or`, and `not`.
 
 Having another `if` in the `else` block is very common:
 
