@@ -715,7 +715,7 @@ def foo(s):
 foo "Hello World!"  # should be foo("Hello World!")
 ~~~~~
 
-Output:
+Error:
 
     File "<stdin>", line 4
         foo "Hello World!"
@@ -738,7 +738,7 @@ x = 5
 print X     # wrong case
 ~~~~~
 
-Output:
+Error:
 
 	Traceback (most recent call last):
 	  File "<stdin>", line 2, in <module>
@@ -758,13 +758,29 @@ print a[0]
 print a[3]
 ~~~~~
 
-Output:
+Error:
 
     Traceback (most recent call in last):
       File "<stdin>", line 1, in <module>
     IndexError: list index out of range
 
 This example illustrates a common cause. As `a` has three elements, you'd expect it to have a third element. However, in Python, the 'first' element is number 0, the 'second' is number 1, and so on. So, the last element in the array is actually number 2, and element number 3 doesn't exist.
+
+### Indentation Error
+
+If you forget to indent some code, **or mix tabs and spaces**, you will get an indentation error. For example:
+
+~~~~~ {.python}
+if x < 5:
+do_some_stuff()
+~~~~~
+
+Error:
+
+	  File "<stdin>", line 2
+		do_some_stuff()
+					^
+	IndentationError: expected an indented block
 
 [identifiers]: #concept-identifiers
 [identifier]: #concept-identifiers
