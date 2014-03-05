@@ -648,7 +648,12 @@ These return a boolean (`True` or `False`) value, and are used in `if` statement
 :   less than, less than or equal to, greater than, etc.
 
 `in`
-:   returns true if the string on the left is contained in the string on the right.
+:   returns true if the string on the left is contained in the string on the right. For example:
+
+~~~~~ {.python}
+if "car" in "Scarzy's hair":
+	print "Of course."
+~~~~~
 
 ### Logical
 
