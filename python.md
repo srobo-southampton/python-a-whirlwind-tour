@@ -585,7 +585,7 @@ Exercises: Functions
 
 ### Trigonometry ###
 
-Write a program that takes as input an angle (in radians) and the length of one side of a right-angled triangle. Print out the length of all sides of the triangle.
+Write a program that takes as input an angle (in radians) and the length of one side (of your choice) of a right-angled triangle. Print out the length of all sides of the triangle.
 
 You'll need the functions contained in the `math` module (<http://docs.python.org/library/math.html>). Note that Python uses radians for its angles. If you are not comfortable with radians, you can use the `radians` function in the `math` module to convert to radians from degrees.
 
