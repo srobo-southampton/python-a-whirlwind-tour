@@ -120,7 +120,7 @@ Run your code and check that it works.
 
 ### Distance calculator ###
 
-Write a program which uses `raw_input` (with `float` as above) to take an X and a Y coordinate, and calculate the distance from (0, 0) to (X, Y) using Pythagoras' Theorem. Put the code into an interpreter and run it. Does it do what you expected?
+Write a program which uses `input` to take an X and a Y coordinate, and calculate the distance from (0, 0) to (X, Y) using Pythagoras' Theorem. Put the code into an interpreter and run it. Does it do what you expected?
 
 **Hint:** you can find the square root of a number by raising it to the power of 0.5, for example, `my_number ** 0.5`.
 
