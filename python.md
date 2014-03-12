@@ -105,11 +105,11 @@ Exercises: Variables and Mathematics
 
 ### Average calculator ###
 
-The first two lines of this program put two numbers entered by the user into variables `a` and `b`. (The `float` function turns the string from `raw_input` into a number.) Replace the comment with code that averages the numbers and puts them in a variable called `average`.
+The first two lines of this program put two numbers entered by the user into variables `a` and `b`. (The `input` function is like `raw_input`, but returns a number (e.g. `42`) when you enter one, rather than a string (like `"42"`).) Replace the comment with code that averages the numbers and puts them in a variable called `average`.
 
 ~~~~~ {.python}
-a = float(raw_input("Enter first number: "))
-b = float(raw_input("Enter second number: "))
+a = input("Enter first number: ")
+b = input("Enter second number: ")
 
 # Store the average of a and b in the variable `average`
 
@@ -372,7 +372,7 @@ Exercises: Lists and Loops
 Write a program which calculates the average of a list of numbers. You can specify the list in the code.
 
 **Extension:**
-You can tell when a user has not entered anything at a `raw_input` prompt when it returns the empty string, `""`. For example:
+You can tell when a user has not entered anything at a `raw_input` prompt when it returns the empty string, `""`. Otherwise, it returns a string (like "42.5"), which you can turn into a number with the `float` function. For example:
 
 ~~~~~ {.python}
 var = raw_input("Enter a number: ")
