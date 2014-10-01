@@ -44,8 +44,8 @@ Your robot is equipped with two wheels, each connected to a motor, and a caster.
 The `SimRobot` object you placed in variable `R` earlier contains a list of the motors connected to it. Each of these motors is itself an object, with a `target` variable which allows you to set the speed. A motor speed is simply a number between -100 and 100. For example, to drive straight forwards, you might use the following piece of code:
 
 ~~~~~ {.python}
-R.motors[0].target = 50
-R.motors[1].target = 50
+R.motors[0].m0.power = 50
+R.motors[0].m1.power = 50
 ~~~~~
 
 If you run this in the simulator, the robot will just drive forward until it hits a wall.
