@@ -647,10 +647,10 @@ These return a boolean (`True` or `False`) value, and are used in `if` statement
 `in`
 :   returns true if the string on the left is contained in the string on the right. For example:
 
-~~~~~ {.python}
-if "car" in "Scarzy's hair":
-	print "Of course."
-~~~~~
+	~~~~~ {.python}
+	if "car" in "Scarzy's hair":
+		print "Of course."
+	~~~~~
 
 ### Logical
 
