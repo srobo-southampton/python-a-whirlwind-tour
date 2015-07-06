@@ -397,9 +397,9 @@ Write a program which prints a list of numbers from 0 to 100, but replace number
 You can concatenate strings in Python with the `+` operator:
 
 ~~~~~ {.python}
-str = "Hello "
-str = str + "World!"
-print str
+message = "Hello "
+message = message + "World!"
+print message
 ~~~~~
 
 Write a program that asks the user for a number, and then prints a triangle of that height, with its right angle at the bottom left. For example, given the number 3, the program should output:
