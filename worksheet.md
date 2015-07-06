@@ -41,7 +41,7 @@ Getting things moving: motors
 
 Your robot is equipped with two wheels, each connected to a motor, and a caster. This allows it to drive forwards and backwards, and turn by setting the left and right wheels at different speeds (a method known as skid steering).
 
-The `SimRobot` object you placed in variable `R` earlier contains a list of the motors connected to it. Each of these motors is itself an object, with a `target` variable which allows you to set the speed. A motor speed is simply a number between -100 and 100. For example, to drive straight forwards, you might use the following piece of code:
+The `SimRobot` object you placed in variable `R` earlier contains a list of the motor controllers connected to it. The simulated robot has one controller, which can control two motors. Each motor is also an object, with a `power` variable which you can use to set its speed. A motor speed is simply a number between -100 and 100. For example, to drive straight forwards at half power, you might use the following piece of code:
 
 ~~~~~ {.python}
 R.motors[0].m0.power = 50
