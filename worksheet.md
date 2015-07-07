@@ -79,7 +79,7 @@ for m in markers:
 		print " - Token", m.info.offset, "is", m.dist, "metres away"
 ~~~~~
 
-The marker objects are documented at <http://srobo.org/docs/programming/sr/vision/#vision_objects>. All of these features are supported by the simulator except for vertices, orientation, and world and image coordinates.
+The marker objects are documented at <https://www.studentrobotics.org/docs/programming/simulator#Interface>.
 
 The most useful properties of a marker object are:
 
