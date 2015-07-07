@@ -6,31 +6,25 @@ In *Python: A Whirlwind Tour*, you learnt to use Python in quite an abstract env
 Using the simulator
 -------------------
 
-On your desktop on the lab machine, you should find a folder named 'robot-sim', with another folder and a couple of Python programs inside. This is the simulator directory. When you place programs in the folder and follow the steps below, your program will be run in the simulator.
+On your desktop on the lab machine, you should find a folder named 'robot-sim'. This is the simulator directory. When you place programs in the folder and follow the steps below, your program will be run in the simulator.
 
-A program is simply a text file with a name ending in `.py`. Create such a file in your robot-sim directory, or open template.py and use 'Save as' to create a copy.
+A program is simply a text file with a name ending in `.py`. Create such a file in your robot-sim directory.
 
-In your program, you first need to initialise the simulator which will contain your robot. To do so, start your program with the following code.
-
-~~~~~ {.python}
-from sr import *
-
-sim = Simulator(num_tokens=5)
-~~~~~
-
-(You can vary the number of tokens in the virtual arena by changing the number after `num_tokens`.)
-
-Next, create a `SimRobot` object. We haven't covered objects, but for now you can think of them as collections of variables and functions.
+In your program, you first need to import the module which lets you interact with your robot. To do so, start your program with the following code:
 
 ~~~~~ {.python}
-R = SimRobot(sim)
+from sr.robot import *
 ~~~~~
 
-The variable `R` now contains a `SimRobot` object. This object will act as your connection to your robot, allowing you to give it commands and read from its sensors. On a real robot, you'll use a `Robot` object, which is similar but with more features.
+Next, create a `Robot` object. We haven't covered objects, but for now you can think of them as collections of variables and functions.
+
+~~~~~ {.python}
+R = Robot()
+~~~~~
+
+The variable `R` now contains a `Robot` object. This object will act as your connection to your robot, allowing you to give it commands and read from its sensors. On a real robot, you'll also use a `Robot` object, which is similar but with more features.
 
 Below this, you can write your program code. You can still use `print` statements as normal.
-
-In the simulator directory is a file called 'template.py', which is ready for you to add your own code to (choose "Display" after double-clicking it). Save your programs in the robot-sim directory.
 
 To run a program that you've written, double-click the "run.sh icon" on your desktop, and choose "Run in terminal". A window will appear listing the programs you have written, each with a number. Enter the number of the program you wish to run, and press enter.
 
@@ -41,7 +35,7 @@ Getting things moving: motors
 
 Your robot is equipped with two wheels, each connected to a motor, and a caster. This allows it to drive forwards and backwards, and turn by setting the left and right wheels at different speeds (a method known as skid steering).
 
-The `SimRobot` object you placed in variable `R` earlier contains a list of the motor controllers connected to it. The simulated robot has one controller, which can control two motors. Each motor is also an object, with a `power` variable which you can use to set its speed. A motor speed is simply a number between -100 and 100. For example, to drive straight forwards at half power, you might use the following piece of code:
+The `Robot` object you placed in variable `R` earlier contains a list of the motor controllers connected to it. The simulated robot has one controller, which can control two motors. Each motor is also an object, with a `power` variable which you can use to set its speed. For example, to drive straight forwards at half power, you might use the following piece of code:
 
 ~~~~~ {.python}
 R.motors[0].m0.power = 50
@@ -50,7 +44,7 @@ R.motors[0].m1.power = 50
 
 If you run this in the simulator, the robot will just drive forward until it hits a wall.
 
-What happens if you change the speed on the first line to `25`? What about a negative number?
+A motor speed is simply a number between -100 (reverse at full power) and 100 (forwards at full power). What happens if you change the speed on the first line to `25`? What about a negative number?
 
 ### Exercise: driving in a square
 
@@ -90,7 +84,7 @@ The marker objects are documented at <http://srobo.org/docs/programming/sr/visio
 
 The most useful properties of a marker object are:
 
-* `m.info.marker_type`: this is a value indicating the type of the marker.Possible values are `MARKER_TOKEN`, `MARKER_ROBOT`, `MARKER_ARENA` (these are the ones on the arena walls), and `MARKER_PEDESTAL`.
+* `m.info.marker_type`: this is a value indicating the type of the marker. Possible values are `MARKER_TOKEN`, `MARKER_ROBOT`, `MARKER_ARENA` (these are the ones on the arena walls), and `MARKER_PEDESTAL`.
 * `m.info.offset`: the ID number of this marker. This can be used to distinguish between different tokens, wall markers, etc..
 * `m.dist`: the distance between the webcam and the marker (in metres).
 * `m.rot_y`: the number of degrees between straight ahead and the marker, where negative numbers are to the left, `0` is straight ahead, and positive numbers are to the right.
@@ -129,19 +123,9 @@ You now know enough to make your simulator robot play the game which your real r
 Moving on to a real robot
 -------------------------
 
-The code that you have written for your robot in the simulator will mostly work on your real robot as well, with the exception of the `R.grab()` and `R.release()` functions (you may wish to write your own replacements, specific to your grabbing mechanism). The only other difference is that instead of writing:
+The code that you have written for your robot in the simulator will mostly work on your real robot as well, with the exception of the `R.grab()` and `R.release()` functions. (You may wish to write your own replacements, specific to your grabbing mechanism.)
 
-~~~~~ {.python}
-R = SimRobot(arena)
-~~~~~
-
-You should write:
-
-~~~~~ {.python}
-R = Robot()
-~~~~~
-
-There are a number of features which we haven't covered here, most importantly the IO and servo boards. The IO board allows you to interface with sensors, while the servo board will likely be quite important for your grabber. These are described in our programming documentation online at <http://srobo.org/docs/programming/sr>.
+There are a number of features which your real robot will have which the simulator doesn't, most importantly the IO (Input/Output) and servo boards. The IO board allows you to interface with sensors, while the servo board will likely be quite important for your grabber. These are described in our programming documentation online at <http://srobo.org/docs/programming/sr>.
 
 Finally, here are a few things to consider when working in the real world:
 
