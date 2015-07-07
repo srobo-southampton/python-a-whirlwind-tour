@@ -76,8 +76,7 @@ markers = R.see()
 print "I can see",len(markers),"markers."
 for m in markers:
 	if m.info.marker_type == MARKER_TOKEN:
-		print " - Token {0} is {1} metres away"\
-				.format(m.info.offset, m.dist)
+		print " - Token", m.info.offset, "is", m.dist, "metres away"
 ~~~~~
 
 The marker objects are documented at <http://srobo.org/docs/programming/sr/vision/#vision_objects>. All of these features are supported by the simulator except for vertices, orientation, and world and image coordinates.
