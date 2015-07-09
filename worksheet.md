@@ -112,7 +112,7 @@ else:
 
 ### Exercise: picking up a token
 
-Adapt your program from the last exercise to pick up the token when it finds it. The token must be within 0.5 metres of the robot and be in front of it to be picked up.
+Adapt your program from the last exercise to pick up the token when it finds it. The token must be within 0.4 metres of the robot and be in front of it to be picked up.
 
 Putting it all together
 -----------------------
