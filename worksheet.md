@@ -6,9 +6,22 @@ In *Python: A Whirlwind Tour*, you learnt to use Python in quite an abstract env
 Using the simulator
 -------------------
 
-On your desktop on the lab machine, you should find a folder named 'robot-sim'. This is the simulator directory. When you place programs in the folder and follow the steps below, your program will be run in the simulator.
+### Running a program
 
-A program is simply a text file with a name ending in `.py`. Create such a file in your robot-sim directory.
+On your desktop on your lab machine, you will find a directory called `Portable Python`, which contains `PyScripter-Portable.exe`. Double click this to open the PyScripter development environment.
+
+In PyScripter, open the file named `run.py` in the `robot-sim` folder on your desktop. This program allows you to launch the simulator.
+To try it out, run it (by clicking the green play icon on the toolbar, or pressing Ctrl+F9).
+A dialog box will ask you for a program name. Enter `test.py` and press ENTER.
+A test program will run in a simulated arena.
+(You may need to bring the simulator window to the front by clicking on it in your taskbar.)
+
+To create your own program, click File > New, and write your code in that file. Save the file in the `robot-sim` folder on your desktop.
+
+To run your program, run `run.py`, like you did before. Enter the name of your
+code file (including the `.py`) into the dialog box and press ENTER.
+
+### The robot object
 
 In your program, you first need to import the module which lets you interact with your robot. To do so, start your program with the following code:
 
@@ -25,10 +38,6 @@ R = Robot()
 The variable `R` now contains a `Robot` object. This object will act as your connection to your robot, allowing you to give it commands and read from its sensors. On a real robot, you'll also use a `Robot` object, which is similar but with more features.
 
 Below this, you can write your program code. You can still use `print` statements as normal.
-
-To run a program that you've written, double-click the "run.sh icon" on your desktop, and choose "Run in terminal". A window will appear listing the programs you have written, each with a number. Enter the number of the program you wish to run, and press enter.
-
-A simulator window will appear, showing your robot in a virtual arena. Anything that you `print` in your program will appear in the first window.
 
 Getting things moving: motors
 -----------------------------
